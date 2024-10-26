@@ -1,5 +1,5 @@
 # uwu
-This is a CLI created with Node.js.
+This is a CLI created with Node.js.<br/>
 It will randomly give you an emoticon based on the mood you entered!
 
 # How to install
