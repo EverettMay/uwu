@@ -2,7 +2,7 @@
 This is a CLI created with Node.js.
 It will randomly give you an emoticon based on the mood you entered!
 
-#How to install
+# How to install
 ## Linux
 ```
 git clone https://github.com/EverettMay/uwu.git
