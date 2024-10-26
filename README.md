@@ -16,7 +16,7 @@ cd into the repository
 ```
 npm install -g .
 ```
-#How to use
+# How to use
 To display all the moods
 ```
 uwu
