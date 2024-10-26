@@ -11,7 +11,7 @@ Clone the repository
 ```
 git clone https://github.com/EverettMay/uwu.git
 ```
-make sure you have Node.js installed/n
+make sure you have Node.js installed<br/>
 If not:
 ```
 sudo apt install nodejs
