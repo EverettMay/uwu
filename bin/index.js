@@ -1,12 +1,15 @@
 #! /usr/bin/env node
 
 import fs from 'fs';
-import chalk from 'chalk';
-import inquirer from 'inquirer';
-import figlet from 'figlet';
 import ncp from "copy-paste";
-
+import { showBanner, getRandomColor, cusChalk, colors} from './even_cuter.js'; 
 import { program } from 'commander';
+
+const randomColor = [];
+const number_of_moods = 9
+for (let i = 0; i < number_of_moods; i++){
+    randomColor[i] = cusChalk.hex(getRandomColor());
+}
 
 program
     .version('1.0.0', '-v, --version')
@@ -14,7 +17,16 @@ program
     .usage("[mood]")
     .description('This CLI will give you a random emoticon based on your mood!\nType uwu for the list of moods')
     if (process.argv.length < 3){
-        console.log("The moods i know:\nhappy\nloving\nangry\nannoyed\nconfused\nsad\nsuprised\nsleepy\nsexy")
+        console.log(cusChalk.hex(colors[0])("The moods I know:\n") 
+        + cusChalk.hex(colors[1])("  happy\n") 
+        +cusChalk.hex(colors[2])("  loving\n")
+        +cusChalk.hex(colors[3])("  angry\n")
+        +cusChalk.hex(colors[4])("  annoyed\n")
+        +cusChalk.hex(colors[5])("  confused\n")
+        +cusChalk.hex(colors[6])("  sad\n")
+        +cusChalk.hex(colors[7])("  suprised\n")
+        +cusChalk.hex(colors[8])("  sleepy\n")
+        +cusChalk.hex(colors[9])("  sexy"))
         process.exit(1)};
 
 program.showHelpAfterError();
@@ -39,7 +51,10 @@ fs.readFile(filepath, 'utf8', (err, data) =>{
     const randomEmo = emo[randomIndex];
 
     ncp.copy(randomEmo);
-    console.log(randomEmo);
-    console.log('Copied to clipboard!');
+    console.log('\n\n\n');
+    console.log('\t'+randomColor[0](randomEmo));
+    console.log('\n\n\n');
+    console.log(randomColor[1]('  Copied to clipboard!'));
+    showBanner('UwU');
     process.exit(1);
 });
