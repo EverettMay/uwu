@@ -4,6 +4,7 @@ import fs from 'fs';
 import ncp from "copy-paste";
 import { showBanner, getRandomColor, cusChalk, colors} from './even_cuter.js'; 
 import { program } from 'commander';
+import path from 'path';
 
 const randomColor = [];
 const number_of_moods = 9
@@ -36,7 +37,9 @@ program.parse(process.argv);
 
 
 const filename = program.args[0];
-const filepath = './emoticons/' + filename+'.txt';
+const filepath = import.meta.dirname.slice(0,-3)+'emoticons/' + filename+'.txt';
+console.log(filepath);
+
 
 
 fs.readFile(filepath, 'utf8', (err, data) =>{
