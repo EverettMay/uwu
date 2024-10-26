@@ -5,6 +5,10 @@ It will randomly give you an emoticon based on the mood you entered!
 # How to install
 ## Linux
 ```
+cd ./where_you_want_to_install
+```
+Clone the repository
+```
 git clone https://github.com/EverettMay/uwu.git
 ```
 make sure you have Node.js installed/n
